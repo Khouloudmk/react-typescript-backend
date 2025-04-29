@@ -49,13 +49,13 @@ async function uploadToGoogleDrive(filePath, fileName) {
   return response.data; // Returns file ID and link
 }
 
-const port = process.env.port; // Define the port number for the server
+const port = process.env.PORT; // Define the port number for the server
 
 const app = express(); // Create an instance of the Express application
 
 // Configure Multer to save files with their original names
 const storage = multer.diskStorage({
-  destination: (req, file, cb) => {
+  destination: (req, file, cb) => {git
     cb(null, 'uploads/'); // Set the destination folder for uploaded files
   },
   filename: (req, file, cb) => {
