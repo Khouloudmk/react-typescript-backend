@@ -55,7 +55,7 @@ const app = express(); // Create an instance of the Express application
 
 // Configure Multer to save files with their original names
 const storage = multer.diskStorage({
-  destination: (req, file, cb) => {git
+  destination: (req, file, cb) => {
     cb(null, 'uploads/'); // Set the destination folder for uploaded files
   },
   filename: (req, file, cb) => {
